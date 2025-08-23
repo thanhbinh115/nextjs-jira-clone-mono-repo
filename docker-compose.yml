@@ -11,7 +11,7 @@ services:
     volumes:
       - ./dbdata/postgresql/data:/var/lib/postgresql/data
     networks:
-      - full-stack-network
+      - app-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -19,5 +19,5 @@ services:
       retries: 5
 
 networks:
-  full-stack-network:
-    external: true
+  app-network:
+    driver: bridge
