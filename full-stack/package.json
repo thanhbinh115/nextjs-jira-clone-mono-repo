@@ -2,7 +2,15 @@
   "name": "@full-stack/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev:db-auth:create": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc db:create",
+    "dev:db-auth:add-migration": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc migration:create --name create-user-table",
+    "dev:db-auth:migrate": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc db:migrate",
+    "dev:db-auth:add-seed": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc seed:generate --name seed-user-data",
+    "dev:db-auth:seed": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc db:seed:all",
+    "dev:db-auth:drop": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/auth-service/.sequelizerc db:drop",
+    "dev:db-auth:setup": "npm run dev:db-auth:drop && npm run dev:db-auth:create && npm run dev:db-auth:migrate && npm run dev:db-auth:seed",
+  },
   "private": true,
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
@@ -39,6 +47,7 @@
     "nx": "21.4.1",
     "postcss": "8.4.38",
     "prettier": "^2.6.2",
+    "sequelize-cli": "^6.6.3",
     "tailwindcss": "3.4.3",
     "tslib": "^2.3.0",
     "typescript": "~5.8.2",
@@ -54,6 +63,8 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.0",
+    "sequelize": "^6.37.7",
+    "sequelize-typescript": "^2.1.6"
   }
 }
