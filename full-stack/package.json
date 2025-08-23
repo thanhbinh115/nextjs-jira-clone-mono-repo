@@ -10,7 +10,7 @@
     "dev:db-auth:seed": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/.sequelizerc db:seed:all",
     "dev:db-auth:drop": "env-cmd -f ./env/local/app.env npx sequelize-cli --options-path ./db/.sequelizerc db:drop",
     "dev:db-auth:setup": "npm run dev:db-auth:drop && npm run dev:db-auth:create && npm run dev:db-auth:migrate && npm run dev:db-auth:seed",
-    "prepare": "husky"
+    "prepare": "cd .. && husky full-stack/.husky"
   },
   "private": true,
   "lint-staged": {
