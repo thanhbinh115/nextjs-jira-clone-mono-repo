@@ -7,7 +7,7 @@ export class AppController {
 
   @Get()
   getData() {
-    const c = 1;
+    const e = 1;
     return this.appService.getData();
   }
 }
