@@ -143,4 +143,4 @@ typings/
 upload/*
 
 # exclude dbdata folder
-dbdata/mysql/data/*
+dbdata/postgresql/data/*
