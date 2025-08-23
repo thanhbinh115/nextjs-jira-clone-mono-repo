@@ -23,6 +23,18 @@ export default [
           ],
         },
       ],
+      'no-unused-vars': [
+        'error',
+        {
+          vars: 'local',
+          args: 'none',
+          caughtErrors: 'all',
+          ignoreRestSiblings: false,
+          reportUsedIgnorePattern: false,
+        },
+      ],
+      //'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error'],
     },
   },
   {
