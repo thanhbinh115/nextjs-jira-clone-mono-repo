@@ -14,10 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@full-stack/db-type": ["api/generated/db-type/src/index.ts"],
-      "@full-stack/prisma": ["libs/shared/prisma/src/index.ts"]
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "tmp"]
 }
