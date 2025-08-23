@@ -21,7 +21,7 @@
     "dev:web:build": "nx run web:build",
     "dev:web:test": "nx run web:test",
     "prod:web:build": "nx run web:build --prod --skip-nx-cache",
-    "prod:web": "env-cmd -f ./env/local/app.env nx run web:start"
+    "prod:web": "env-cmd -f ./env/local/app.env node apps/web/.next/standalone/apps/web/server.js"
   },
   "private": true,
   "lint-staged": {
