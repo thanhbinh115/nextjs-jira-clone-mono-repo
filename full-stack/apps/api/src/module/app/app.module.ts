@@ -6,6 +6,8 @@ import authConfig from '../../common/config/auth.config';
 import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from '../logger/logger.module';
 import { LoggingMiddleware } from '../../common/middleware/logging.middleware';
+import { DatabaseModule } from '../database/database.module';
+import { HealthModule } from '../health/health.module';
 
 @Module({
   imports: [
@@ -14,6 +16,8 @@ import { LoggingMiddleware } from '../../common/middleware/logging.middleware';
       load: [postgresConfig, authConfig],
     }),
     LoggerModule,
+    DatabaseModule,
+    HealthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

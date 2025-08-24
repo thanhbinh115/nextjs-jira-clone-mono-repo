@@ -76,13 +76,14 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.9.0",
+    "@faker-js/faker": "^10.0.0",
     "@nestjs/common": "^11.0.0",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.0",
     "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.0",
     "@nestjs/sequelize": "^11.0.0",
+    "@nestjs/terminus": "^11.0.0",
     "axios": "^1.6.0",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
