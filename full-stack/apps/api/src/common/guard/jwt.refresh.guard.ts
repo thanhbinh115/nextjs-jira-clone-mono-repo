@@ -18,6 +18,9 @@ export class AuthJwtRefreshGuard extends AuthGuard('jwt-refresh') {
       return;
     }
 
+    console.log('err: ', err);
+    console.log('user: ', user);
+
     if (err || !user) {
       throw new UnauthorizedException('Refresh token unauthorized');
     }
